@@ -1,0 +1,3 @@
+SELECT  AVG (total_discharges)
+FROM `bigquery-public-data.medicare.inpatient_charges_2011` 
+where provider_zipcode = 99519
