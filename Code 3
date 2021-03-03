@@ -1,2 +1,0 @@
-SELECT count(Farm_proprietors_income), count(Nonfarm_proprietors_income)
-FROM `bigquery-public-data.sdoh_bea_cainc30.fips`
