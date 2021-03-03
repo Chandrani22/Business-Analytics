@@ -1,4 +1,0 @@
-SELECT SUM( daily_confirmed_cases) as confirmed_cases
-FROM `bigquery-public-data.covid19_ecdc.covid_19_geographic_distribution_worldwide` 
-where date >= ("2020-03-20") and date <= ("2020-07-28")
-AND countries_and_territories = "Cuba"
