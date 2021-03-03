@@ -1,0 +1,3 @@
+SELECT min(Personal_income)  
+FROM `bigquery-public-data.sdoh_bea_cainc30.fips` 
+LIMIT 1000
