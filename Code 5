@@ -1,3 +1,0 @@
-SELECT Wages_and_salaries AS wages
-FROM `bigquery-public-data.sdoh_bea_cainc30.fips`
-where Wages_and_salaries < 15000
