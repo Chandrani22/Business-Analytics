@@ -1,0 +1,15 @@
+Code 1: SELECT min(Personal_income)  
+FROM `bigquery-public-data.sdoh_bea_cainc30.fips` 
+LIMIT 1000
+
+Code 2: SELECT max(Personal_income)  
+FROM `bigquery-public-data.sdoh_bea_cainc30.fips` 
+LIMIT 1000
+
+Code 3: SELECT count(Farm_proprietors_income), count(Nonfarm_proprietors_income)
+FROM `bigquery-public-data.sdoh_bea_cainc30.fips`
+
+Code 4: SELECT AVG(hours_per_week) FROM bigquery-public-data.ml_datasets.census_adult_income where age > 20 
+LIMIT 1000
+
+Code 5:
