@@ -15,3 +15,34 @@ LIMIT 1000
 Code 5: SELECT Wages_and_salaries AS wages
 FROM `bigquery-public-data.sdoh_bea_cainc30.fips`
 where Wages_and_salaries < 15000
+
+Code 6: SELECT SUM( daily_confirmed_cases) as confirmed_cases
+FROM `bigquery-public-data.covid19_ecdc.covid_19_geographic_distribution_worldwide` 
+where date >= ("2020-03-20") and date <= ("2020-07-28")
+AND countries_and_territories = "Cuba”
+
+Code 7: SELECT B.year,B.country_code,B.country_name,B.infant_mortality,B.life_expectancy,A.midyear_population,
+ FROM `bigquery-public-data.census_bureau_international.midyear_population_5yr_age_sex` A
+join `bigquery-public-data.census_bureau_international.mortality_life_expectancy` B
+on A.year= B.year
+order by midyear_population desc 
+ LIMIT 10
+ 
+ Code 8: SELECT DISTINCT B.country_name, B.year,B.country_code,B.infant_mortality,B.life_expectancy,A.midyear_population,
+ FROM `bigquery-public-data.census_bureau_international.midyear_population_5yr_age_sex` A
+join `bigquery-public-data.census_bureau_international.mortality_life_expectancy` B
+on A.year= B.year
+order by midyear_population desc 
+ LIMIT 10
+ 
+ Code 9: SELECT count(*) as rows_with_zero_value
+ FROM `bigquery-public-data.census_bureau_international.midyear_population_5yr_age_sex` A
+join `bigquery-public-data.census_bureau_international.mortality_life_expectancy` B
+on A.year= B.year
+where A.midyear_population =0 and B.infant_mortality = 0 and B.life_expectancy = 0
+
+Code 10: SELECT count(*) as rows_with_zero_value
+ FROM `bigquery-public-data.census_bureau_international.midyear_population_5yr_age_sex` A
+join `bigquery-public-data.census_bureau_international.mortality_life_expectancy` B
+on A.year= B.year
+where A.midyear_population =0 and B.infant_mortality = 0 and B.life_expectancy = 0
